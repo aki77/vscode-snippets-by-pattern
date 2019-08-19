@@ -2,7 +2,7 @@
   "name": "snippets-by-pattern",
   "displayName": "Snippets by pattern",
   "description": "Snippets by specific pattern",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "aki77",
   "icon": "images/icon.png",
   "engines": {
