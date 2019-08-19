@@ -4,8 +4,10 @@ import {
   CompletionItemProvider,
   TextDocument,
   Position,
-  SnippetString
+  SnippetString,
+  MarkdownString
 } from "vscode";
+import { SnippetParser } from "vscode-snippet-parser";
 
 export type Snippets = {
   [name: string]: {
@@ -27,7 +29,9 @@ export default class SnippetProvider implements CompletionItemProvider {
       );
       item.detail = snippet.description || name;
       item.insertText = snippetString;
-      item.documentation = snippetString.value;
+      item.documentation = new MarkdownString().appendCodeblock(
+        new SnippetParser().text(snippetString.value)
+      );
       return item;
     });
   }
