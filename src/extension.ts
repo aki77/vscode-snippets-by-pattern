@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
 import SnippetProvider, { Snippets } from "./SnippetProvider";
+import { copySnippetToClipboard } from "./commands";
 
 let disposables: vscode.Disposable[] = [];
 
@@ -35,6 +36,14 @@ export function activate(context: vscode.ExtensionContext) {
       }
     })
   );
+
+  context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand(
+      "snippetsByPattern.copySnippetToClipboard",
+      copySnippetToClipboard
+    )
+  );
+
   reload();
 }
 

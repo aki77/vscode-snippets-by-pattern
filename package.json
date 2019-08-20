@@ -24,6 +24,13 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "snippetsByPattern.copySnippetToClipboard",
+        "title": "Copy snippet to clipboard",
+        "enablement": "editorHasSelection"
+      }
+    ],
     "configuration": {
       "type": "object",
       "title": "Snippets by pattern",

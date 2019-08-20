@@ -42,3 +42,9 @@ For example `settings.json`
 ```
 
 User and Workspace settings are merged.
+
+## Commands
+
+### `snippetsByPattern.copySnippetToClipboard`
+
+![demo](https://i.gyazo.com/bbca63de32735c70c6a4b3c9a103b9a0.gif)
