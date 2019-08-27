@@ -4,6 +4,10 @@ All notable changes to the "snippets-by-pattern" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## 0.3.1
+
+- Fix bug when body is array
+
 ## 0.3.0
 
 - Add `snippetsByPattern.copySnippetToClipboard` command

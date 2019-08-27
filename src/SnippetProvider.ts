@@ -20,9 +20,12 @@ export type Snippets = {
 export default class SnippetProvider implements CompletionItemProvider {
   constructor(private snippets: Snippets) {}
 
-  public provideCompletionItems(document: TextDocument, position: Position) {
+  public provideCompletionItems() {
     return Object.entries(this.snippets).map(([name, snippet]) => {
-      const snippetString = new SnippetString(Array(snippet.body).join("\n"));
+      const body = Array.isArray(snippet.body)
+        ? snippet.body.join("\n")
+        : snippet.body;
+      const snippetString = new SnippetString(body);
       const item = new CompletionItem(
         snippet.prefix,
         CompletionItemKind.Snippet
