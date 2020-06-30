@@ -2,8 +2,6 @@ import {
   CompletionItem,
   CompletionItemKind,
   CompletionItemProvider,
-  TextDocument,
-  Position,
   SnippetString,
   MarkdownString
 } from "vscode";
