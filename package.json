@@ -4,6 +4,7 @@
   "description": "Snippets by specific pattern",
   "version": "0.4.1",
   "publisher": "aki77",
+  "license": "MIT",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.46.0"
