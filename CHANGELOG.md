@@ -4,6 +4,10 @@ All notable changes to the "snippets-by-pattern" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## 0.4.3
+
+- Update dependencies
+
 ## 0.4.2
 
 - Update dependencies
